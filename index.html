@@ -4,7 +4,7 @@
 <style>
  body{
 	margin-top:1px;
-	background-image:url("background.jpg");
+	background-image:url("images/background.jpg");
 	min-height:500px;
 	background-attachment:fixed;
 	background-position:center;
@@ -237,7 +237,7 @@ footer {
   <a class="dec" href="#contact">Contact</a>  
 </h1>
 
-<a href="#hilltop"><img id=myBtn class="mybutton-back" title="Go to Top" src="top.gif">  
+<a href="#hilltop"><img id=myBtn class="mybutton-back" title="Go to Top" src="images/top.gif">  
 </a> 
 
 	<section id="home" >
@@ -245,7 +245,7 @@ footer {
 			<h2> AlPha_kiLLer</h2>
 		</div>
     <div class="" style="padding:20px" align="center">
-    	<img align="center" class="profile img-responsive" src="profile.jpg" />
+    	<img align="center" class="profile img-responsive" src="images/profile.jpg" />
       <h3 class=" jumbo-text"><b><em>Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture.
 				<HR></HR>
 			<p>
@@ -255,14 +255,14 @@ footer {
     </div>
   </section>
 	<section id="visits" class="visit-block">
-		<a target="_blank" class="" href="https://github.com/alphakiller"><img class="connect-me" src="github.png"></a>
-		<a target="_blank" class="" href="https://www.linkedin.com/in/rohit-samudralwar-22613012b/"><img class="connect-me" src="linkedin.png"></a>
-		<a target="_blank" class="" href="https://www.codechef.com/users/alpha_killer"><img class="connect-me" src="codechef.jpeg"></a>
-		<a target="_blank" class="" href="https://www.hackerearth.com/@samudralwar1"><img class="connect-me" src="hackerearth.png"></a>
-		<a target="_blank" class="" href="https://twitter.com/samudralwar1"><img class="connect-me" src="twitter.png"></a>
-  		<a target="_blank" class="" href="https://plus.google.com/104354827596265293619"><img class="connect-me" src="google-plus.png"></a>
-  		<a target="_blank" class="" href="https://www.facebook.com/rohit.samudralwar"><img class="connect-me" src="facebook.png"></a>
-		<a target="_blank" class="" href=""><img class="connect-me" src="skype.png">
+		<a target="_blank" class="" href="https://github.com/alphakiller"><img class="connect-me" src="images/github.png"></a>
+		<a target="_blank" class="" href="https://www.linkedin.com/in/rohit-samudralwar-22613012b/"><img class="connect-me" src="images/linkedin.png"></a>
+		<a target="_blank" class="" href="https://www.codechef.com/users/alpha_killer"><img class="connect-me" src="images/codechef.jpeg"></a>
+		<a target="_blank" class="" href="https://www.hackerearth.com/@samudralwar1"><img class="connect-me" src="images/hackerearth.png"></a>
+		<a target="_blank" class="" href="https://twitter.com/samudralwar1"><img class="connect-me" src="images/twitter.png"></a>
+  		<a target="_blank" class="" href="https://plus.google.com/104354827596265293619"><img class="connect-me" src="images/google-plus.png"></a>
+  		<a target="_blank" class="" href="https://www.facebook.com/rohit.samudralwar"><img class="connect-me" src="images/facebook.png"></a>
+		<a target="_blank" class="" href=""><img class="connect-me" src="images/skype.png">
 		</a>	
 	</section> 
 	<section id="skillbar" class="skill-block" >
@@ -408,9 +408,10 @@ function scrollFunction() {
         document.getElementById("myBtn").style.display = "block";
 }
 
+
 jQuery(function($)  
 {
-    $("#contact_form").submit(function()
+    $("#contact").submit(function()
     {
         var email = $("#email").val(); // get email field value
         var name = $("#name").val(); // get name field value
@@ -420,7 +421,7 @@ jQuery(function($)
             type: "POST",
             url: "https://mandrillapp.com/api/1.0/messages/send.json",
             data: {
-                'key': 'Fuck_off',
+                'key': 'F***_o**',
                 'message': {
                     'from_email': email,
                     'from_name': name,
