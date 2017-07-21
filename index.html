@@ -47,6 +47,7 @@
 	text-shadow:2px 2px 2px red, 0 0 25px #cee810, 0 10px 50px #cee810;
 	color:white;
 	text-align:center;
+	font-family: "Times New Roman", Times, serif;
 }
 .mybutton-back{ 
 	width:50px;
@@ -70,7 +71,7 @@
 	border-color:white;
 	border-style:solid;
 	border-width:6px;
-	border-radius:60%;
+	border-radius:40%;
 	opacity:0.8;
 }
 .intro-text{
@@ -204,6 +205,16 @@ width:110px;
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
+.mywork-back{
+	background-color:rgba(239, 164, 127,0.5);
+	margin:2px;
+}
+.game-ss{
+	padding: 10px;
+}
+.game-ss :hover{
+	opacity:0.8;
+}
 .message{
 	height:200px;
 	margin:1px;
@@ -236,7 +247,7 @@ footer {
 <h1 class="topnav">
 	<a class="dec active" href="#home">Home</a>
   <a class="dec" href="#skillbar">My Skills</a>
-	<a class="dec" href="#work">My Work</a>
+	<a class="dec" href="#mywork">My Work</a>
   <a class="dec" href="#contact">Contact</a>  
 </h1>
 
@@ -415,6 +426,15 @@ function closeNav() {
 		</div>
 	</section>
 	<section id="mywork">
+		<div class="row mywork-back" align="center">
+			<div class="col-sm-4" style="color:white; margin:50px;">
+				<em style="color:pink"><h2> --<' My Work '>-- </h2></em>
+				<h3>Click on the Image to play Game..!</h3>
+			</div>
+			<div class="col-sm-4 game-ss">
+				<a target=_blank href="tic-tac-toe/game.html"><img width="290" height="390" src="tic-tac-toe/screenshot.png" alt="Game"></img></a>
+			</div>
+		</div>
 	</section>	
 	<div class="container sections" id="contact">
         <section>
