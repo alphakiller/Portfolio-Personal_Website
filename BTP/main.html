@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Application Management</title>
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Muli:300,500,400' type='text/css'>
+		<style>
+		body 
+		{
+			font-family: 'Muli', sans-serif;
+			width: 100wh;
+			height: 90vh;
+			color: #fff;
+			background: linear-gradient(-45deg, #EE7752, #E73C7E, rgb(125,128,0), rgb(000,0,153));
+			background-size: 400% 400%;
+			-webkit-animation: Gradient 15s ease infinite;
+			-moz-animation: Gradient 15s ease infinite;
+			animation: Gradient 15s ease infinite;
+		}
+		ul
+		{
+			border: 2px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    padding: 12px 20px;
+
+		}
+        select {
+        width: 150px;
+        height: 30px;
+        
+    }
+    </style>
+    </head>
+	<body >
+    <div class="container" style="margin-top:30px">
+	  	<div class="col-sm-8">
+		  	<h2>Applicant Information </h2>
+			<ul style="width:50%">
+				<li><b style="color: Red">Name of Applicant :</b> Rohit Samudralwar</li>
+			    <li><b style="color: Red">Roll No :</b> 16ucc080</li>
+			    <li><b style="color: Red">Mobile No :</b> 7057165987</li>
+			</ul>
+    	</div>
+    	<div class="col-sm-8" >
+    		<form name="myForm" onsubmit="return validateForm()" action="submited.html">
+            	<div class="form-row">
+				  	<h1>APPLICATION DETAILS :-</h1>
+				    <div class="col-md-4">
+				      <label>Department :- </label>
+				      <select name="department" style="background-color: Black;color: #FFFFFF;">
+				      	<option value="None">Please Select</option>
+					    <option value="medical">Medical Leave</option>
+					    <option value="academic">Academic Leave</option>
+					    <option value="exam">Exam Leave</option>
+					    <option value="reimbursement">Reimbursement form</option>
+					  </select>
+				    </div>
+				    <div class="col-md-4">
+				      <label>Authority :- </label>
+				      <select name="authority" style="background-color: Black;color: #FFFFFF;">
+				      	<option value="None" >Please Select</option>
+					    <option value="director" >Director Office</option>
+					    <option value="dean">Dean Office</option>
+					    <option value="cse_hod">CSE HOD</option>
+					    <option value="ece_hod">ECE HOD</option>
+					    <option value="mme_hod">MME HOD</option>
+					  </select>
+				    </div>
+				</div>
+	    		<div class="form-row">
+				    <div class="col-12 col-md-8">
+				      	<label>Describe the issue</label>
+				      	<input name="fname" type="text" class="form-control is-invalid" id="validationServer03" placeholder="Details" required; style="width: 400px;height: 100px;">
+				    <br>
+				    </div>
+		    	</div>
+		    	<div class="form-row"> 
+					<div class="col-12 col-md-8">
+						<button class="btn btn-primary" type="submit">Submit form</button> 
+					</div>
+				</div>
+			</form>
+        </div>
+    </div>
+   </body>
+</html>
+<script>
+	function validateForm()
+	{
+		var Department = document.forms["myForm"]["department"].value;
+		if (Department == "None") 
+		{
+			alert("Department must be filled out");
+			return false;
+		}
+		var Authority = document.forms["myForm"]["authority"].value;
+		if (Authority == "None") 
+		{
+			alert("Authority must be filled out");
+			return false;
+		}
+		var Description = document.forms["myForm"]["fname"].value;
+		if (Description == "") 
+		{
+			alert("Description must be filled out");
+			return false;
+		}
+	}
+	function afterSubmit()
+	{
+		var Department, Authority;
+	 	Department = document.getElementByname("department").value;
+	 	Authority = document.getElementByname("authority").value;
+	 	alert("ads");
+	    return false;
+	    text = "Your Request for ";// + Department + "has been submited to "+Authority;
+	  	document.getElementById("demo").innerHTML = text;
+	}
+</script>
